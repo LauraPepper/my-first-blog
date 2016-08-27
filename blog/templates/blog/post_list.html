@@ -20,6 +20,10 @@
 			    		<div class="post">
 			    			<h1><a href="">{{ post.title }}</a></h1>
 			    			<p class="date"><strong>published: {{ post.published_date }}</strong></p>
+			    			{% if post.image %}
+
+			    			<img src="{{MEDIA_URL}}/{{post.image}}" height="200">
+			    			{% endif %}
 			    			<p>{{ post.text|linebreaksbr }}</p>
 			    		</div>
 			    
